@@ -1,0 +1,10 @@
+#lol
+cryptg
+tgcrypto
+Pyrogram==2.0.93
+cloudscraper
+psutil
+flask
+telethon
+motor
+pymongo
