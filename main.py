@@ -49,7 +49,7 @@ def checking_access(message):
                 ]
             )
    # Send a message with the keyboard
-            message.reply_text("**Generate New token to use me**.😊", reply_markup=keyboard)
+            message.reply_text("**Generate New token to use me**\n\nHow to verify:- <a href="https://t.me/Save_Restricted_contentx_Bot">Click here</a>.😊", reply_markup=keyboard)
 	
             return False
     return True, None
