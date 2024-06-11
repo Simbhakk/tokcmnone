@@ -45,11 +45,11 @@ def checking_access(message):
             user_data[user_id].update(data)             
             keyboard = InlineKeyboardMarkup(
                 inline_keyboard=[
-                    [InlineKeyboardButton(text="Click to Generate", url=short_url(f"https://telegram.me/{bot_name}?start={token}"))]
+                    [InlineKeyboardButton(text="Click here to verify", url=short_url(f"https://telegram.me/{bot_name}?start={token}"))]
                 ]
             )
    # Send a message with the keyboard
-            message.reply_text("**Generate New token to use me**\n\nHow to verify:- <a href="https://t.me/Save_Restricted_contentx_Bot">Click here</a>.😊", reply_markup=keyboard)
+            message.reply_text('**Generate New token to use me**\n\nHow to verify:- <a href="https://youtube.com/shorts/-RrEXn9dXXM">Click here</a>.', reply_markup=keyboard)
 	
             return False
     return True, None
