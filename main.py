@@ -220,11 +220,6 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 #forcesub
 def handle_force_subscribe(bot, message):
     try:
-        invite_link = bot.create_chat_invite_link(int(CHANNEL))
-    except FloodWait as e:
-        asyncio.sleep(e.x)
-        return 400
-    try:
         user = bot.get_chat_member(int(CHANNEL), message.from_user.id)
         if user.status == "kicked":
             bot.send_message(
