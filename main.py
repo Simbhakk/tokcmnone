@@ -77,6 +77,13 @@ def get_users(client, message):
             [InlineKeyboardButton('👁️ Close', callback_data='cancel')]
         ]
     ))
+#token
+@bot.on_message(filters.command('generate'))
+def send_token(client, message):
+    if not checking_access(message):
+        return
+    else:
+        bot.send_message(message.chat.id, "**You have already generated token.\nFeel free to use me. send link**")
 #broadcast
 @bot.on_message(filters.command('broadcastingi'))
 def send_text(client, message):
