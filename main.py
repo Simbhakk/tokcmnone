@@ -15,9 +15,9 @@ import json
 
 user=[]
 user_data = {}
-WAIT_MSG = """"<b>Processing ...</b>"""
+WAIT_MSG = """<b>Processing ...</b>"""
 REPLY_ERROR = 'error found'
-START_TEXT = 'Hi👋, I am Save Restricted Content Bot.\n\n**•FROM PUBLIC CHANNELS**\n-Send direct message/video link to clone it here.\ne.g:- `https://t.me/rajz_bots/72`\n\n🚨`NOTE:-` Our bot does not support \nPRIVATE CHANNEL/GROUP.\n\nJoin for update:- @Save_Restricted_contentz'
+START_TEXT = 'Hi👋, I am a ```token based``` Save Restricted Content Bot.\n\n**•FROM PUBLIC CHANNELS**\n-Send direct message/video link to clone it here.\ne.g:- `https://t.me/rajz_bots/72`\n\n🚨`NOTE:-` Our bot does not support \nPRIVATE CHANNEL/GROUP.\n\nJoin for update:- @Save_Restricted_contentz'
 #config
 def getenv(var): return os.environ.get(var) or DATA.get(var, None)
 
@@ -45,7 +45,7 @@ def checking_access(message):
             user_data[user_id].update(data)             
             keyboard = InlineKeyboardMarkup(
                 inline_keyboard=[
-                    [InlineKeyboardButton(text="Click here to verify", url=short_url(f"https://telegram.me/{bot_name}?start={token}"))]
+                    [InlineKeyboardButton(text="Click here to Generate", url=short_url(f"https://telegram.me/{bot_name}?start={token}"))]
                 ]
             )
    # Send a message with the keyboard
