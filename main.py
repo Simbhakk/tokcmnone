@@ -49,7 +49,7 @@ def checking_access(message):
                 ]
             )
    # Send a message with the keyboard
-            message.reply_text('**Generate New token to use me**\n\nHow to /generate:- <a href="https://youtube.com/shorts/-RrEXn9dXXM">Click For tutorial</a>.',disable_web_page_preview = True, reply_markup=keyboard)
+            message.reply_text('**Generate New token to use me**\n\nHow to generate:- <a href="https://youtube.com/shorts/-RrEXn9dXXM">Click For tutorial</a>.',disable_web_page_preview = True, reply_markup=keyboard)
 	
             return False
     return True, None
