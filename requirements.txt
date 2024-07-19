@@ -1,6 +1,6 @@
 cryptg
 tgcrypto
-Pyrogram==2.0.93
+Pyrogram==2.0.106
 cloudscraper
 psutil
 telethon
