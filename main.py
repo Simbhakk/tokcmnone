@@ -24,7 +24,6 @@ def getenv(var): return os.environ.get(var) or DATA.get(var, None)
 bot_token = getenv("TOKEN") 
 api_hash = getenv("HASH") 
 api_id = getenv("ID")
-CHANNEL = getenv("CHANNEL")
 TOKEN_TIMEOUT = getenv("TOKEN_TIMEOUT")
 bot_name = getenv("BOT_NAME")
 
@@ -181,11 +180,6 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
             add_user(id)
         except:
             pass
-    if CHANNEL:
-        fsub = handle_force_subscribe(client, message)
-        if fsub == 400:
-            return
-
     if "https://t.me/+" in message.text or "https://t.me/joinchat/" in message.text or "https://t.me/c/" in message.text or "https://t.me/b/" in message.text:
         bot.send_message(message.chat.id, "Bot supports only public restricted channel.")
         return
@@ -224,30 +218,6 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
     else:
         bot.send_message(message.chat.id, "**Send a Valid link. Bro, press /help for more info.**")
 
-#forcesub
-def handle_force_subscribe(bot, message):
-    try:
-        user = bot.get_chat_member(int(CHANNEL), message.from_user.id)
-        if user.status == "kicked":
-            bot.send_message(
-                chat_id=message.from_user.id,
-                text="Sorry Sir, You are Banned. Contact My [Support Group](https://t.me/+Xvc0oHwMwjU3ZDJl).",
-                disable_web_page_preview=True,
-            )
-            return 400
-    except UserNotParticipant:
-        bot.send_message(
-            chat_id=message.from_user.id,
-            text="You have to join  @Save_Restricted_contentz to use me.\n First join this channel then use me."
-	)
-        return 400
-    except Exception:
-        bot.send_message(
-            chat_id=message.from_user.id,
-            text="Something Went Wrong. Contact My [Support Group](https://t.me/NT_BOTS_SUPPORT).",
-            disable_web_page_preview=True,
-        )
-        return 400
 # get the type of message
 def get_message_type(msg: pyrogram.types.messages_and_media.message.Message):
 	try:
