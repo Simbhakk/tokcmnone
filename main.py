@@ -17,7 +17,7 @@ user=[]
 user_data = {}
 WAIT_MSG = """<b>Processing ...</b>"""
 REPLY_ERROR = 'error found'
-START_TEXT = 'Hi👋, I am a token based **Save Restricted Content Bot**.\n\n**•FROM PUBLIC CHANNELS**\n-Send direct message/video link to clone it here.\ne.g:- `https://t.me/rajz_bots/72`\n\n🚨`NOTE:-` Our bot does not support \nPRIVATE CHANNEL/GROUP.\n\nJoin for update:- @Save_Restricted_contentz'
+START_TEXT = 'Hi👋, I am a Token Based Save Restricted Content Bot**.\n\n**•FROM PUBLIC CHANNELS**\n-Send direct message/video link to clone it here.\ne.g:- `https://t.me/rajz_bots/72`\n\n🚨`NOTE:-` Our bot does not support \nPRIVATE CHANNEL/GROUP.\n\nJoin for update:- @Save_Restricted_contentz'
 #config
 def getenv(var): return os.environ.get(var) or DATA.get(var, None)
 
